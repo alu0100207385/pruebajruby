@@ -1,0 +1,35 @@
+<div class="row-fluid">
+
+	<div class="col-md-6">
+		<h1>Say hello to world</h1>
+		<ul>
+			<li>Up in heroku</li>
+			<li>Up in openshift</li>
+		</ul>
+		<form name="form1" action="/" method="POST">
+			<label>Name:</label>
+			<input type="text" name="input1">
+			<label>Rol:</label>
+			<input type="text" name="input2">
+			<input type="submit" value="Submit">
+		</form>
+
+		<form name="form2" action="/delete" method="POST">
+			<input type="submit" value="Delete all">
+		</form>
+	</div>
+
+<div class="col-md-6">
+	<h4>List</h4>
+	<% if (@list.length == 0) %>
+		<p>EMPTY</p>
+	<% else %>
+		<ol>
+			<% @list.each do |x| %>
+				<li><%= x.name %> :: <%= x.rol %></li>
+			<% end %>
+		</ol>
+	<% end %>
+</div>
+
+</div>
