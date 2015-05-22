@@ -4,7 +4,7 @@ require 'sinatra/base'
 require 'data_mapper'
 
 class MyApp < Sinatra::Base
-
+=begin
 	configure :development do
    		DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/people.db" )
    	end
@@ -23,7 +23,7 @@ class MyApp < Sinatra::Base
 	DataMapper.finalize
 	DataMapper.auto_upgrade!
 
-
+=end
 	configure do
 		set :root, File.dirname(__FILE__)
 		set :views, Proc.new { File.join(root, "../views") }
@@ -36,12 +36,12 @@ class MyApp < Sinatra::Base
 	end
 
 	post '/' do
-		@list = User.first_or_create(:name => params[:input1], :rol => params[:input2])
+		#@list = User.first_or_create(:name => params[:input1], :rol => params[:input2])
 		redirect '/'
 	end
 
 	post '/delete' do
-		User.destroy
+		#User.destroy
 		redirect '/'
 	end
 
