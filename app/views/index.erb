@@ -21,7 +21,15 @@
 
 <div class="col-md-6">
 	<h4>List</h4>
-
+	<% if (@list.length == 0) %>
+		<p>EMPTY</p>
+	<% else %>
+		<ol>
+			<% @list.each do |x| %>
+				<li><%= x.name %> :: <%= x.rol %></li>
+			<% end %>
+		</ol>
+	<% end %>
 </div>
 
 </div>
