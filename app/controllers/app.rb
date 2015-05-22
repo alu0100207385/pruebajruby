@@ -11,7 +11,8 @@ class MyApp < Sinatra::Base
 
    	configure :production do
    		#DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
-   		DataMapper.setup(:default, ENV['OPENSHIFT_POSTGRESQL_DB_URL2'] || ENV['HEROKU_POSTGRESQL_ONYX_URL'])
+   		#DataMapper.setup(:default, ENV['OPENSHIFT_POSTGRESQL_DB_URL2'] || ENV['HEROKU_POSTGRESQL_ONYX_URL'])
+   		#DataMapper.setup(:default)
    	end
 
 	DataMapper::Logger.new($stdout, :debug)
@@ -30,7 +31,7 @@ class MyApp < Sinatra::Base
 	end
 
 	get '/' do
-		@list = User.all
+		#@list = User.all
 		erb :index
 	end
 

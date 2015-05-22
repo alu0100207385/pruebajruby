@@ -12,10 +12,11 @@ group :development do
 	gem 'activerecord-jdbcsqlite3-adapter', platform: :jruby
 	gem 'dm-sqlite-adapter'
 end
-
+=begin
 group :production do
  	gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
   	gem 'do_postgres', platform: :ruby
   	gem 'pg', platform: :ruby
   	gem 'dm-postgres-adapter'
 end
+=end
