@@ -14,7 +14,7 @@ group :development do
 end
 
 group :production do
- 	#gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
+ 	gem 'activerecord-jdbcpostgresql-adapter', platform: :jruby
  	gem 'do_jdbc', platform: :jruby
  	gem 'jruby-pgp', platform: :jruby
   	gem 'do_postgres', platform: :ruby

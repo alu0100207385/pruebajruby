@@ -12,7 +12,7 @@ class MyApp < Sinatra::Base
    	configure :production do
    		#DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
    		#DataMapper.setup(:default, ENV['OPENSHIFT_POSTGRESQL_DB_URL2'] || ENV['HEROKU_POSTGRESQL_ONYX_URL'])
-   		DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_ONYX_URL'])
+   		DataMapper.setup(:default, ENV['DATABASE_URL'])
    	end
 
 	DataMapper::Logger.new($stdout, :debug)
